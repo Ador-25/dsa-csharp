@@ -8,7 +8,8 @@ public class Program
         Console.WriteLine("Hello DSA! :D");
         //Test.TestSinglyLinkedList();
         //Test.TestTree();
-        Test.TestBinaryTree();
+        //Test.TestBinaryTree();
         //Console.WriteLine(1.Equals(1));
+        Test.TestGraph();
     }
 }

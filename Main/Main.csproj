@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\FastIO\FastIO.csproj" />
+    <ProjectReference Include="..\Graph\Graph.csproj" />
     <ProjectReference Include="..\LinkedList\LinkedList.csproj" />
     <ProjectReference Include="..\Tree\Tree.csproj" />
   </ItemGroup>

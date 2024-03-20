@@ -5,6 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Tree;
+using Graph;
+using _io = FastIO.Output;
 
 namespace Main;
 
@@ -99,5 +101,29 @@ internal class Test
 
     }
 
+    public static void TestGraph()
+    {
+        Graph.Node<int> n0 = new(0);
+        Graph.Node<int> n1 = new(1);
+        Graph.Node<int> n2 = new(2);
+        Graph.Node<int> n3 = new(3);
+        Graph.Node<int> n4 = new(4);
+        Graph.Node<int> n5 = new(5);
+        Graph.Node<int> n6 = new(6);
+
+        Graph<int> graph = new();
+        graph.AddEdge(n0, n1,4);
+        graph.AddEdge(n0, n2,2);
+        graph.AddEdge(n1, n2,1);
+        graph.AddEdge(n1, n3,2);
+        graph.AddEdge(n2, n4,1);
+        graph.AddEdge(n3, n4,3);
+        n1.PrintNeighbours();
+        n0.PrintNeighbours();
+
+        graph.DFS(n0);
+        graph.BFS(n1);
+        graph.RecursiveDFS(n3);
+    }
 
 }
