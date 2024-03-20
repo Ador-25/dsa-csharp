@@ -58,4 +58,43 @@ internal class Test
         tree.PrintDFS();
 
     }
+
+    private static List<BinaryTreeNode<int>> getRoots()
+    {
+        List<BinaryTreeNode<int>> result = new();
+        BinaryTreeNode<int> root;
+        root = new(data: 0);
+        root.Left = new(data: 1);
+        root.Right = new(data: 2);
+        root.Left.Left = new(data: 4);
+        root.Left.Right = new(data: 5);
+        root.Left.Right.Left = new(data: 6);
+        root.Left.Left.Left = new(data: 11, left: 11, right: 11);
+
+        result.Add(root);
+
+        root = new BinaryTreeNode<int>(0);
+        root.Left = new BinaryTreeNode<int>(1);
+        root.Right = new BinaryTreeNode<int>(2);
+        root.Left.Left = new BinaryTreeNode<int>(4);
+        root.Left.Right = new BinaryTreeNode<int>(5);
+        root.Left.Right.Left = new BinaryTreeNode<int>(6);
+
+        result.Add(root);
+
+        return result;
+
+    }
+
+    public static void TestBinaryTree()
+    {
+        var roots = getRoots();
+        roots.ForEach(root => {
+            BinaryTree<int> bt = new(root);
+            bt.InOrder();
+        });
+
+    }
+
+
 }

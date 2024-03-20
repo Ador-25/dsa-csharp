@@ -5,7 +5,9 @@ public class Program
 {
     static void Main()
     {
+        Console.WriteLine("Hello DSA! :D");
         //Test.TestSinglyLinkedList();
-        Test.TestTree();
+        //Test.TestTree();
+        Test.TestBinaryTree();
     }
 }
