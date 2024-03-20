@@ -92,6 +92,8 @@ internal class Test
         roots.ForEach(root => {
             BinaryTree<int> bt = new(root);
             bt.InOrder();
+            bt.PreOrder();
+            bt.PostOrder();
         });
 
     }

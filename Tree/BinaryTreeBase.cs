@@ -20,6 +20,7 @@ public class BinaryTreeBase<T>
 
     public void InOrder()
     {
+        Console.WriteLine("in order: ");
         if (_root is null)
             return;
         BinaryTreeNode<T> currentRoot = _root;
@@ -35,13 +36,42 @@ public class BinaryTreeBase<T>
             InOrderTraversal(root.Right);
     }
 
-    public void PostOrder()
-    {
-        throw new NotImplementedException();
-    }
-
     public void PreOrder()
     {
-        throw new NotImplementedException();
+        Console.WriteLine("pre order: ");
+        if (_root is null)
+            return;
+        BinaryTreeNode<T> currentRoot = _root;
+        PreOrderTraversal(currentRoot);
+        Console.WriteLine();
     }
+
+    private void PreOrderTraversal(BinaryTreeNode<T> root)
+    {
+        Console.Write(root.Data + " ");
+        if (root.Left is not null)
+            PreOrderTraversal(root.Left);
+        if (root.Right is not null)
+            PreOrderTraversal(root.Right);
+    }
+
+    public void PostOrder()
+    {
+        Console.WriteLine("post order: ");
+        if (_root is null)
+            return;
+        BinaryTreeNode<T> currentRoot = _root;
+        PostOrderTraversal(currentRoot);
+        Console.WriteLine();
+    }
+
+    private void PostOrderTraversal(BinaryTreeNode<T> root)
+    {
+        if (root.Left is not null)
+            PostOrderTraversal(root.Left);
+        if (root.Right is not null)
+            PostOrderTraversal(root.Right);
+        Console.Write(root.Data + " ");
+    }
+
 }
