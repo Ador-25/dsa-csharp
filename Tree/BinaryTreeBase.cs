@@ -8,16 +8,11 @@ namespace Tree;
 
 public class BinaryTreeBase<T>
 {
-    private BinaryTreeNode<T> _root;    
+    private protected BinaryTreeNode<T> _root;    
     public BinaryTreeBase(BinaryTreeNode<T> root)
     {
         _root = root;
     }
-    public bool ElementExists(T key)
-    {
-        throw new NotImplementedException();
-    }
-
     public void InOrder()
     {
         Console.WriteLine("in order: ");

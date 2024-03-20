@@ -94,6 +94,7 @@ internal class Test
             bt.InOrder();
             bt.PreOrder();
             bt.PostOrder();
+            Console.WriteLine(bt.ElementExists(11));
         });
 
     }

@@ -9,5 +9,6 @@ public class Program
         //Test.TestSinglyLinkedList();
         //Test.TestTree();
         Test.TestBinaryTree();
+        //Console.WriteLine(1.Equals(1));
     }
 }
